@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Variable in JS</title>
+
+</head>
+
+<body>
+    <button onclick="
+        cartQuantity=cartQuantity+1;
+        console.log(`Cart quantity is: ${cartQuantity}`);
+        ">Add cart</button>
+    <button onclick="
+    cartQuantity=cartQuantity+2;
+
+    console.log(`Cart quantity is: ${cartQuantity}`);
+    ">+2</button>
+    <button onclick="
+     cartQuantity=cartQuantity+3;
+     console.log(`Cart quantity is: ${cartQuantity}`);
+    ">+3</button>
+    <button onclick="
+        console.log(`Final Cart quantity is: ${cartQuantity}`);
+    ">Show Cart</button>
+    <button onclick="
+    cartQuantity =0;
+    console.log(`Cart quantity is: ${cartQuantity}`);
+    ">Resent Cart</button>
+
+    <script>
+
+        let cartQuantity = 0;
+
+    </script>
+</body>
+
+</html>
