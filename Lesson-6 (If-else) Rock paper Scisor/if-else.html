@@ -1,0 +1,120 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <button onclick="
+    randomNumber= Math.random();
+    computerMove ='';
+
+        if(randomNumber>0 && randomNumber<1/3)
+        {
+            computerMove='Stone';
+        }
+        else if(randomNumber>1/3 && randomNumber<2/3)
+       {
+        computerMove ='Paper';
+       }
+       else if(randomNumber>2/3 && randomNumber<1)
+       {
+        computerMove= 'Scissors'
+       }
+
+       if(computerMove==='Stone')
+       {
+        alert(`You Move Stone, and computer move ${computerMove}. Result: Tie`);
+       }
+       else  if(computerMove==='Scissors')
+       {
+        alert(`You Move Stone, and computer move ${computerMove}. Result: You Won the game`);
+       }
+       else  if(computerMove==='Paper')
+       {
+        alert(`You Move Stone, and computer move ${computerMove}. Result: You Lose the game`);
+       }
+      
+        ">Stone
+    </button>
+
+    <button onclick="
+    randomNumber= Math.random();
+    computerMove ='';
+
+        if(randomNumber>0 && randomNumber<1/3)
+        {
+            computerMove='Stone';
+        }
+        else if(randomNumber>1/3 && randomNumber<2/3)
+       {
+        computerMove ='Paper';
+       }
+       else if(randomNumber>2/3 && randomNumber<1)
+       {
+        computerMove= 'Scissors'
+       }
+
+       if(computerMove==='Stone')
+       {
+        alert(`You Move Paper, and computer move ${computerMove}. Result: You won the game`);
+       }
+       else  if(computerMove==='Scissors')
+       {
+        alert(`You Move Paper, and computer move ${computerMove}. Result: You Lose the game`);
+       }
+       else  if(computerMove==='Paper')
+       {
+        alert(`You Move Paper, and computer move ${computerMove}. Result: Game ties`);
+       }
+      
+      
+      
+        ">Paper</button>
+    <button onclick="
+    randomNumber= Math.random();
+    computerMove ='';
+
+        if(randomNumber>0 && randomNumber<1/3)
+        {
+            computerMove='Stone';
+        }
+        else if(randomNumber>1/3 && randomNumber<2/3)
+       {
+        computerMove ='Paper';
+       }
+       else if(randomNumber>2/3 && randomNumber<1)
+       {
+        computerMove= 'Scissors'
+       }
+
+       if(computerMove==='Stone')
+       {
+        alert(`You Move Scissors, and computer move ${computerMove}. Result: You Lose the game`);
+       }
+       else  if(computerMove==='Scissors')
+       {
+        alert(`You Move Scissors, and computer move ${computerMove}. Result:Game is ties`);
+       }
+       else  if(computerMove==='Paper')
+       {
+        alert(`You Move Scissors, and computer move ${computerMove}. Result: You won the game`);
+       }
+      
+      
+      
+        ">Scissors</button>
+
+
+
+    <script>
+
+
+        let randomNumber, computerMove;
+    </script>
+
+
+</body>
+
+</html>
