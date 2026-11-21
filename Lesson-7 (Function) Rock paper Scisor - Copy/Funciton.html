@@ -1,21 +1,22 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-
+    <title>Stone Paper Scissors</title>
 </head>
 
 <body>
 
-    <h1>Stone paper Scissors Game</h1>
+    <h1>Stone Paper Scissors Game</h1>
     <hr>
 
-    <button onclick="playerMove ('stone')">Stone</button>
-    <button onclick="playerMove ('paper')">Paper</button>
-    <button onclick="playerMove ('scissor')">Scissor</button>
-    <button onclick="playerMove ('reset')">Reset</button>
-
+    <button onclick="playerMove('stone')">Stone</button>
+    <button onclick="playerMove('paper')">Paper</button>
+    <button onclick="playerMove('scissor')">Scissor</button>
+    <button onclick="playerMove('reset')">Reset</button>
 
     <script>
+
         const score = {
             win: 0,
             lose: 0,
@@ -23,9 +24,23 @@
         };
 
         function playerMove(player) {
-            let randomNumber, computerMove;
 
-            randomNumber = Math.random();
+            // Reset Logic
+            if (player === 'reset') {
+
+                score.win = 0;
+                score.lose = 0;
+                score.tie = 0;
+
+                alert(`Score Reset Successfully!
+Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
+                return;
+            }
+
+            let randomNumber = Math.random();
+            let computerMove;
+
             if (randomNumber < 1 / 3) {
                 computerMove = 'stone';
             }
@@ -33,33 +48,44 @@
                 computerMove = 'paper';
             }
             else {
-                computerMove = 'scissor'
+                computerMove = 'scissor';
             }
+
             if (computerMove === player) {
+
                 score.tie += 1;
-                alert(`You Move ${player}, and computer move ${computerMove}. Result: Game Tie \n Score is: Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
+                alert(`Game Tie!
+You: ${player}, Computer: ${computerMove}
+Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
             }
-            else if ((computerMove === 'scissor' && player === 'paper') ||
+            else if (
+                (computerMove === 'scissor' && player === 'paper') ||
                 (computerMove === 'paper' && player === 'stone') ||
-                (computerMove === 'stone' && player === 'scissor')) {
+                (computerMove === 'stone' && player === 'scissor')
+            ) {
+
                 score.win += 1;
-                alert(`You Move ${player}, and computer move ${computerMove}. Result: Computer Won the Game \n Score is: Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
-            }
-            else if (player === 'reset') {
-                score.win = 0;
-                score.lose = 0;
-                score.tie = 0;
-                alert(`You Click on:  ${player}. So, Reset all of score. Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
+                alert(`You Won!
+You: ${player}, Computer: ${computerMove}
+Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
             }
             else {
+
                 score.lose += 1;
-                alert(`You Move ${player}, and computer move ${computerMove}. Result: You Won the Game \n Score is: Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
+                alert(`You Lost!
+You: ${player}, Computer: ${computerMove}
+Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`);
+
             }
 
         }
 
     </script>
-
 
 </body>
 
